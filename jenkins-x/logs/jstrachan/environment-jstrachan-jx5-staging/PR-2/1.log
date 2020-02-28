@@ -1,0 +1,94 @@
+
+Showing logs for build [32mjstrachan-environment-jstrachan-qz6wc-1[0m stage [32mpr-checks[0m and container [32mstep-credential-initializer-qwfj4[0m
+{"level":"warn","ts":1582910388.5578837,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582910388.5597775,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-qz6wc-1[0m stage [32mpr-checks[0m and container [32mstep-working-dir-initializer-4trrh[0m
+{"level":"warn","ts":1582910389.5093105,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1582910389.5103383,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-qz6wc-1[0m stage [32mpr-checks[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-environment-jstrachan-qz6wc-1[0m stage [32mpr-checks[0m and container [32mstep-git-source-jstrachan-environment-jstrachan-qz6wc-f7nwz[0m
+{"level":"warn","ts":1582910395.6723015,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582910396.6775298,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/environment-*********-**5-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-qz6wc-1[0m stage [32mpr-checks[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:b1027b1c224690a0e0fad539a90e28c335dd51f7,2:b2bd86edf18e7ebbca3b985e0d5c26c76da89d14
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow b2bd86edf18e7ebbca3b985e0d5c26c76da89d14: b1027b1c224690a0e0fad539a90e28c335dd51f7:
+DEBUG: ran git fetch --unshallow origin b2bd86edf18e7ebbca3b985e0d5c26c76da89d14: b1027b1c224690a0e0fad539a90e28c335dd51f7: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git reset --hard b1027b1c224690a0e0fad539a90e28c335dd51f7
+DEBUG: ran git reset --hard b1027b1c224690a0e0fad539a90e28c335dd51f7 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge b2bd86edf18e7ebbca3b985e0d5c26c76da89d14
+DEBUG: ran git merge b2bd86edf18e7ebbca3b985e0d5c26c76da89d14 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e b1027b1c224690a0e0fad539a90e28c335dd51f7..HEAD
+Merged SHA b2bd86edf18e7ebbca3b985e0d5c26c76da89d14 with commit message 'chore: Promote bdd-nh-1582910244 to version 0.0.1' into base branch master
+
+Showing logs for build [32mjstrachan-environment-jstrachan-qz6wc-1[0m stage [32mpr-checks[0m and container [32mstep-create-helmfile[0m
+
+Showing logs for build [32mjstrachan-environment-jstrachan-qz6wc-1[0m stage [32mpr-checks[0m and container [32mstep-lint-helmfile-system[0m
+Adding repo dev http://chartmuseum-**.35.241.156.203.nip.io
+"dev" has been added to your repositories
+
+Adding repo jenkins-x https://storage.googleapis.com/chartmuseum.jenkins-x.io
+"jenkins-x" has been added to your repositories
+
+Adding repo zloeber git+https://github.com/rawlingsj/helm-namespace@chart
+"zloeber" has been added to your repositories
+
+Updating repo
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "dev" chart repository
+...Successfully got an update from the "zloeber" chart repository
+...Successfully got an update from the "jenkins-x" chart repository
+Update Complete. ⎈ Happy Helming!⎈ 
+
+Fetching jenkins-x/empty
+Fetching zloeber/namespace
+Linting release=empty, chart=/tmp/051685525/empty/latest/jenkins-x/empty/empty
+==> Linting /tmp/051685525/empty/latest/jenkins-x/empty/empty
+
+1 chart(s) linted, 0 chart(s) failed
+
+Linting release=namespace-**-staging, chart=/tmp/051685525/namespace-**-staging/latest/zloeber/namespace/namespace
+==> Linting /tmp/051685525/namespace-**-staging/latest/zloeber/namespace/namespace
+[INFO] Chart.yaml: icon is recommended
+
+1 chart(s) linted, 0 chart(s) failed
+
+
+Showing logs for build [32mjstrachan-environment-jstrachan-qz6wc-1[0m stage [32mpr-checks[0m and container [32mstep-lint-helmfile-apps[0m
+Adding repo dev http://chartmuseum-**.35.241.156.203.nip.io
+"dev" has been added to your repositories
+
+Adding repo jenkins-x http://chartmuseum.jenkins-x.io
+"jenkins-x" has been added to your repositories
+
+Adding repo zloeber git+https://github.com/rawlingsj/helm-namespace@chart
+"zloeber" has been added to your repositories
+
+Updating repo
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "dev" chart repository
+...Successfully got an update from the "zloeber" chart repository
+...Successfully got an update from the "jenkins-x" chart repository
+Update Complete. ⎈ Happy Helming!⎈ 
+
+Fetching dev/bdd-nh-1582910244
+Fetching zloeber/namespace
+Linting release=bdd-nh-1582910244, chart=/tmp/361465108/bdd-nh-1582910244/0.0.1/dev/bdd-nh-1582910244/bdd-nh-1582910244
+==> Linting /tmp/361465108/bdd-nh-1582910244/0.0.1/dev/bdd-nh-1582910244/bdd-nh-1582910244
+
+1 chart(s) linted, 0 chart(s) failed
+
+Linting release=namespace-**-staging, chart=/tmp/361465108/namespace-**-staging/latest/zloeber/namespace/namespace
+==> Linting /tmp/361465108/namespace-**-staging/latest/zloeber/namespace/namespace
+[INFO] Chart.yaml: icon is recommended
+
+1 chart(s) linted, 0 chart(s) failed
+
