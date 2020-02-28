@@ -1,0 +1,196 @@
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-credential-initializer-9gm5g[0m
+{"level":"warn","ts":1582910440.6039617,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582910440.6048765,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-working-dir-initializer-pkv6s[0m
+{"level":"warn","ts":1582910441.9683323,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1582910441.969436,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-git-source-jstrachan-environment-jstrachan-tnfvj-44cqz[0m
+{"level":"warn","ts":1582910450.1439257,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582910451.1437035,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/environment-*********-**5-staging.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:f9aaca1ad654d401ac0ed3836056648ab7d6f60c
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
+Git configured for user: jenkins-x-bot and email jenkins-x@googlegroups.com
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
+disabling ** step verify preinstall as using a local environment
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-install-jx-crds[0m
+Jenkins X CRDs upgraded with success
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-generate-helmfile[0m
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-helmfile-system[0m
+Adding repo dev http://chartmuseum-**.35.241.156.203.nip.io
+"dev" has been added to your repositories
+
+Adding repo jenkins-x https://storage.googleapis.com/chartmuseum.jenkins-x.io
+"jenkins-x" has been added to your repositories
+
+Adding repo zloeber git+https://github.com/rawlingsj/helm-namespace@chart
+"zloeber" has been added to your repositories
+
+Updating repo
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "dev" chart repository
+...Successfully got an update from the "zloeber" chart repository
+...Successfully got an update from the "jenkins-x" chart repository
+Update Complete. ⎈ Happy Helming!⎈ 
+
+Affected releases are:
+  empty (jenkins-x/empty) UPDATED
+  namespace-**-staging (zloeber/namespace) UPDATED
+
+Upgrading release=namespace-**-staging, chart=zloeber/namespace
+Listing releases matching ^namespace-**-staging$
+Release "namespace-**-staging" does not exist. Installing it now.
+NAME: namespace-**-staging
+LAST DEPLOYED: Fri Feb 28 17:21:16 2020
+NAMESPACE: **
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+
+namespace-**-staging	**       	1       	2020-02-28 17:21:16.814550811 +0000 UTC	deployed	namespace-0.1.0	0.1.0      
+
+Upgrading release=empty, chart=jenkins-x/empty
+Release "empty" does not exist. Installing it now.
+NAME: empty
+LAST DEPLOYED: Fri Feb 28 17:21:22 2020
+NAMESPACE: **-staging
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+
+Listing releases matching ^empty$
+empty	**-staging	1       	2020-02-28 17:21:22.541660717 +0000 UTC	deployed	empty-0.0.3	           
+
+
+UPDATED RELEASES:
+NAME                   CHART               VERSION
+namespace-**-staging   zloeber/namespace     0.1.0
+empty                  jenkins-x/empty       0.0.3
+
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-verify-ingress[0m
+Waiting to find the external host name of the ingress controller Service in namespace nginx with name nginx-ingress-controller
+No domain flag provided so using default 35.241.156.203.nip.io to generate Ingress rules
+defaulting the domain to 35.241.156.203.nip.io and modified **-requirements.yml
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-helmfile-apps[0m
+Adding repo dev http://chartmuseum-**.35.241.156.203.nip.io
+"dev" has been added to your repositories
+
+Adding repo jenkins-x http://chartmuseum.jenkins-x.io
+"jenkins-x" has been added to your repositories
+
+Adding repo zloeber git+https://github.com/rawlingsj/helm-namespace@chart
+"zloeber" has been added to your repositories
+
+Updating repo
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "dev" chart repository
+...Successfully got an update from the "zloeber" chart repository
+...Successfully got an update from the "jenkins-x" chart repository
+Update Complete. ⎈ Happy Helming!⎈ 
+
+Affected releases are:
+  bdd-nh-1582910159 (dev/bdd-nh-1582910159) UPDATED
+  namespace-**-staging (zloeber/namespace) UPDATED
+
+Upgrading release=namespace-**-staging, chart=zloeber/namespace
+Release "namespace-**-staging" has been upgraded. Happy Helming!
+NAME: namespace-**-staging
+LAST DEPLOYED: Fri Feb 28 17:21:32 2020
+NAMESPACE: **
+STATUS: deployed
+REVISION: 2
+TEST SUITE: None
+
+Listing releases matching ^namespace-**-staging$
+namespace-**-staging	**       	2       	2020-02-28 17:21:32.079462363 +0000 UTC	deployed	namespace-0.1.0	0.1.0      
+
+Upgrading release=bdd-nh-1582910159, chart=dev/bdd-nh-1582910159
+Release "bdd-nh-1582910159" does not exist. Installing it now.
+NAME: bdd-nh-1582910159
+LAST DEPLOYED: Fri Feb 28 17:21:34 2020
+NAMESPACE: **-staging
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+Get the application URL by running these commands:
+
+kubectl get ingress bdd-nh-1582910159-bdd-nh-1582910159
+
+Listing releases matching ^bdd-nh-1582910159$
+bdd-nh-1582910159	**-staging	1       	2020-02-28 17:21:34.651128095 +0000 UTC	deployed	bdd-nh-1582910159-0.0.1	0.0.1      
+
+
+UPDATED RELEASES:
+NAME                   CHART                   VERSION
+namespace-**-staging   zloeber/namespace         0.1.0
+bdd-nh-1582910159      dev/bdd-nh-1582910159     0.0.1
+
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-git-creds[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-verify-jenkins-x-environment[0m
+disabling ** step verify env as using a local environment
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-install-pipelines[0m
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-update-webhooks[0m
+DEBUG: Finding service url for hook in namespace **
+DEBUG: Couldn't find service url, attempting to look up via ingress
+DEBUG: found service url http://hook-**.35.241.156.203.nip.io
+Updating webhooks for Owner: ********* and Repository: bdd-nh-1582910159 in git server: https://github.com
+Checking hooks for repository *********/bdd-nh-1582910159 with user *********
+Found matching hook for url http://hook-**.35.241.156.203.nip.io/hook
+Updating GitHub webhook for *********/bdd-nh-1582910159 for url http://hook-**.35.241.156.203.nip.io/hook
+Updating webhooks for Owner: ********* and Repository: bdd-nh-1582910244 in git server: https://github.com
+Checking hooks for repository *********/bdd-nh-1582910244 with user *********
+Found matching hook for url http://hook-**.35.241.156.203.nip.io/hook
+Updating GitHub webhook for *********/bdd-nh-1582910244 for url http://hook-**.35.241.156.203.nip.io/hook
+Updating webhooks for Owner: ********* and Repository: environment-*********-**5-dev in git server: https://github.com
+Checking hooks for repository *********/environment-*********-**5-dev with user *********
+Found matching hook for url http://hook-**.35.241.156.203.nip.io/hook
+Updating GitHub webhook for *********/environment-*********-**5-dev for url http://hook-**.35.241.156.203.nip.io/hook
+Updating webhooks for Owner: ********* and Repository: environment-*********-**5-production in git server: https://github.com
+Checking hooks for repository *********/environment-*********-**5-production with user *********
+Found matching hook for url http://hook-**.35.241.156.203.nip.io/hook
+Updating GitHub webhook for *********/environment-*********-**5-production for url http://hook-**.35.241.156.203.nip.io/hook
+Updating webhooks for Owner: ********* and Repository: environment-*********-**5-staging in git server: https://github.com
+Checking hooks for repository *********/environment-*********-**5-staging with user *********
+Found matching hook for url http://hook-**.35.241.156.203.nip.io/hook
+Updating GitHub webhook for *********/environment-*********-**5-staging for url http://hook-**.35.241.156.203.nip.io/hook
+
+Showing logs for build [32mjstrachan-environment-jstrachan-tnfvj-1[0m stage [32mrelease[0m and container [32mstep-verify-installation[0m
+verifying the Jenkins X installation in namespace **
+verifying pods
+Checking pod statuses
+POD                                                        STATUS
+jenkins-x-chartmuseum-7844b7b6cb-z4k2c                     Running
+**-boot-9pzk6                                              Succeeded
+**boot-helmfile-resources-controllerbuild-7bbf487499-j2p2n Running
+**boot-helmfile-resources-controllerrole-fd9c77c6-cd4g8    Running
+lighthouse-lighthouse-7454d4bc56-9q8bb                     Running
+lighthouse-lighthouse-7454d4bc56-lr7wz                     Running
+nexus-nexus-5f77cf7b86-m5q87                               Running
+tekton-pipelines-controller-666488cbd5-ntnxw               Running
+tide-66c684d4f8-zkdk6                                      Running
+Verifying the git config
+Verifying username ********* at git server github at https://github.com
+Found 21 organisations in git server https://github.com: CamelCookbook, FuseByExample, arcalos-dashboard, arcalos-environments, cb-kubecd, cloudbees, codeship, fabric8-updatebot, fusesource, jenkins-x, jenkins-x-apps, jenkins-x-buildpacks, jenkins-x-charts, jenkins-x-dashboard, jenkins-x-images, jenkins-x-labs, jenkins-x-quickstarts, jenkins-x-test-projects, jenkinsci, jenkinsx, petclinic-gcp
+Validated pipeline user ********* on git server https://github.com
+Git tokens seem to be setup correctly
+Installation is currently looking: GOOD
