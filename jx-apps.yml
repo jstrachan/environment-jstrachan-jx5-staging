@@ -1,1 +1,6 @@
-defaultNamespace: ""
+apps:
+- name: dev/bdd-nh-1582910159
+  version: 0.0.1
+repositories:
+- name: dev
+  url: http://chartmuseum-jx.35.241.156.203.nip.io
